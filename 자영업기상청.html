@@ -1,0 +1,843 @@
+﻿<!DOCTYPE html>
+
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>창업창고 - 자영업 기상청</title>
+    <style>
+        #div1 {
+            background-color: rgb(255 255 255);
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            margin: -8px;
+            z-index: 10;
+            border-bottom: 1px solid rgb(240 240 240);
+        }
+        .ddd40 {
+            left: 5%;
+            top: 10px;
+            position: absolute;
+        }
+
+        .ddd1 { /*자영업이야기*/
+            left: 20%;
+            top: 30px;
+            font-size: 15px;
+            position: absolute;
+            font-weight: bold; /*글 속성 굵게*/
+        }
+
+        .ddd2 {
+            left: 40%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        .ddd3 {
+            left: 65%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+
+        .ddd4 {
+            left: 80%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: 100;
+        }
+
+        .ddd5 {
+            left: 92%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: 100;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+
+        .aaa1 /*자영업이야기*/ {
+            left: 35%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        .aaa2 /*자영업 기상청*/ {
+            left: 50%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        .aaa3 /*창업분석실*/ {
+            left: 65%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        #div2 /*자영업 기상청 제목*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 81px;
+            width: 1280px;
+            height: 115px;
+            border-bottom: 1px solid rgb(240 240 240);
+            transform: translate(-50%,0%);
+            z-index: 2;
+        }
+
+
+        #div3 /*자영업 기상도*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 197px;
+            width: 1280px;
+            height: 215px;
+            border-bottom: 1px solid rgb(240 240 240);
+            transform: translate(-50%,0%);
+            z-index: 2;
+        }
+
+        #div3-2 /*자영업 기상도 우측*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 197px;
+            width: 700px;
+            height: 215px;
+            border-bottom: 1px solid rgb(240 240 240);
+            transform: translate(-10%,0%);
+            z-index: 3;
+        }
+
+        #div4 /*시간대별 기상도 + 기상도 리뷰*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 424px;
+            width: 1280px;
+            height: 285px;
+            border-bottom: 1px solid rgb(240 240 240);
+            transform: translate(-50%,0%);
+            z-index: 2;
+
+        }
+        #div4-1 /*시간대별 기상도*/ {
+            background-color: rgb(249 249 249);
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            width: 550px;
+            height: 180px;
+            border-radius: 15px;
+            transform: translate(-50%,0%);
+            z-index: 2;
+        }
+        #div5 /*로그인 후 이용해 주세요*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 710px;
+            width: 1280px;
+            height: 90px;
+            border-bottom: 1px solid rgb(240 240 240);
+            transform: translate(-50%,0%);
+            z-index: 2;
+        }
+
+        #div5-1 /*로그인 후 이용해 주세요 상자*/ {
+            background-color: rgb(245 245 245);
+            position: absolute;
+            left: 50%;
+            top: 726px;
+            width: 1280px;
+            height: 58px;
+            transform: translate(-50%,0%);
+            border: 1px solid rgb(240 240 240);
+            z-index: 2;
+            box-shadow: 0px 1px 0px rgb(200 200 200) inset;
+        }
+
+        #div6-1 /*댓글 1줄*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            width: 1280px;
+            height: 95px;
+            transform: translate(-50%,0%);
+            border-bottom: 1px solid rgb(240 240 240);
+            z-index: 2;
+        }
+
+        #div6-2 /*댓글 2줄*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            width: 1280px;
+            height: 115px;
+            transform: translate(-50%,0%);
+            border-bottom: 1px solid rgb(240 240 240);
+            z-index: 2;
+        }
+
+        #div6-3 /*댓글 3줄*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            width: 1280px;
+            height: 135px;
+            transform: translate(-50%,0%);
+            border-bottom: 1px solid rgb(240 240 240);
+            z-index: 2;
+        }
+
+        #div7 /*리뷰 목록*/ {
+            background-color: rgb(255 255 255);
+            position: absolute;
+            left: 50%;
+            top: 1361px;
+            width: 1280px;
+            height: 153px;
+            transform: translate(-50%,0%);
+            z-index: 2;
+        }
+
+        #div7-1 /*리뷰 목록 버튼*/ {
+            width: 24px;
+            height: 24px;
+            background-color: rgb(65 201 243);
+            position: absolute;
+            top: 1381px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            z-index: 5;
+        }
+
+        #bottom {
+            width: 100%;
+            height: 162px;
+            background-color: rgb(246 248 249);
+            position: absolute;
+            top: 1514px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            z-index: 5;
+        }
+
+        #bottom-1 {
+            width: 900px;
+            height: 102px;
+            background-color: rgba(246, 248, 249, 0);
+            position: absolute;
+            top: 1514px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            margin: 0px -100px;
+            z-index: 5;
+        }
+
+        .font1 { /*제목 폰트*/
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        .font1-2 { /*제목 폰트*/
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .font2 { /*제목 설명 회색폰트*/
+            font-size: 16px;
+            color: rgb(128 128 128);
+        }
+
+        .font2black { /*제목 설명 검정 굵게*/
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .font3 {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .font4 {
+            font-size: 13px;
+            color: rgb(128 128 128);
+        }
+
+        .font5 {
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .font6 { /*리뷰 시간*/
+            font-size: 8px;
+            color: rgb(128 128 128);
+        }
+
+        .font6-1 { /*리뷰 폰트*/
+            font-size: 14px;
+            color: rgb(68 68 68);
+        }
+
+
+        /* 브라우저 마진, 패딩 없애기 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 라디오버튼 가리기 */
+        .section [id*="slide"] {
+            display: none;
+        }
+
+        /* 슬라이드*/
+        .section .slidewrap {
+            max-width: 550px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section .slidelist {
+            white-space: nowrap;
+            font-size: 0;
+        }
+
+            .section .slidelist > li {
+                display: inline-block;
+                vertical-align: middle;
+                width: 100%;
+                transition: all .5s;
+            }
+
+                .section .slidelist > li > a {
+                    display: block;
+                    position: relative;
+                }
+
+        /* 버튼 스타일 */
+        .section .slide-control {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+
+            .section .slide-control label {
+                position: absolute;
+                z-index: 9;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 40px;
+                cursor: pointer;
+            }
+
+            .section .slide-control .left {
+                left: 470px;
+                background: url('image/right.png') center center / 100% no-repeat;
+            }
+
+            .section .slide-control .right {
+                right: 470px;
+                background: url('image/left.png') center center / 100% no-repeat;
+            }
+
+            .section .slide-control [class*="control"] {
+                display: none;
+            }
+
+        /* 변화값이 li까지 전달 */
+        .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {
+            transform: translateX(0%);
+        }
+
+        .section [id="slide02"]:checked ~ .slidewrap .slidelist > li {
+            transform: translateX(-100%);
+        }
+
+
+
+        /*  변화값이 버튼까지 전달 */
+        .section [id="slide01"]:checked ~ .slidewrap .control01 {
+            display: block;
+        }
+
+        .section [id="slide02"]:checked ~ .slidewrap .control02 {
+            display: block;
+        }
+
+
+        /* 라디오버튼 가리기2222 */
+        .section2 [id*="slide2"] {
+            display: none;
+        }
+
+        /* 슬라이드*/
+        .section2 .slidewrap2 {
+            max-width: 550px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .section2 .slidelist2 {
+            white-space: nowrap;
+            font-size: 0;
+        }
+
+            .section2 .slidelist2> li {
+                display: inline-block;
+                vertical-align: middle;
+                width: 100%;
+                transition: all .5s;
+            }
+
+                .section2 .slidelist2 > li > a {
+                    display: block;
+                    position: relative;
+                }
+
+        /* 버튼 스타일 */
+        .section2 .slide-control2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+
+            .section2 .slide-control2 label {
+                position: absolute;
+                z-index: 9;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 40px;
+                cursor: pointer;
+            }
+
+            .section2 .slide-control2 .left2 {
+                left: 470px;
+                background: url('image/right.png') center center / 100% no-repeat;
+            }
+
+            .section2 .slide-control2 .right2 {
+                right: 470px;
+                background: url('image/left.png') center center / 100% no-repeat;
+            }
+
+            .section2 .slide-control2 [class*="control2"] {
+                display: none;
+            }
+
+        /* 변화값이 li까지 전달 */
+        .section2 [id="slide08"]:checked ~ .slidewrap2 .slidelist2 > li {
+            transform: translateX(0%);
+        }
+
+        .section2 [id="slide09"]:checked ~ .slidewrap2 .slidelist2 > li {
+            transform: translateX(-100%);
+        }
+
+        .section2 [id="slide10"]:checked ~ .slidewrap2 .slidelist2 > li {
+            transform: translateX(-200%);
+        }
+
+        /*  변화값이 버튼까지 전달 */
+        .section2 [id="slide08"]:checked ~ .slidewrap2 .control08 {
+            display: block;
+        }
+
+        .section2 [id="slide09"]:checked ~ .slidewrap2 .control09 {
+            display: block;
+        }
+
+        .section2 [id="slide10"]:checked ~ .slidewrap2 .control10 {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div1">
+        <a href="main.html"><img class="ddd40" src="image/logo_1.png"></a>
+        <a class="ddd1">자영업 이야기</a>
+        <a class="ddd2">자영업 기상청</a>
+        <a href="ex - 복사본/a.html" class="ddd3">창업 분석실</a>
+        <a class="ddd4">로그인 후 이용해주세요 |</a>
+        <a href="login.html" class="ddd5">회원가입</a>
+
+    </div>
+    <div id="div2">
+        <p class="font1" style="padding:33px 10px;">
+            <br>
+            자영업 기상청
+            <a class="font2">자영업자들의 실시간 현황 공유</a>
+        </p>
+
+    </div>
+    <div id="div3">
+        <table style="border-right: 2px solid rgb(240 240 240); width:560px">
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        <a class="font3" style="padding:23px 10px;">
+                            2022.06.07
+                        </a>
+
+                        <a class="font4" style="padding:0px 12px;">업데이트</a>
+                        <a class="font4">2022-06-06 23:00:00<br><br></a>
+                        <a class="font2black" style=" padding:10px 0px;">
+                            현재 자영업 기상도는
+                        </a>
+                        <a class="font1-2">
+                            구름조금
+                        </a>
+                        <a class="font2black">
+                            입니다.
+                        </a>
+                        <a style="font-size: 15px; color: rgb(128 128 128);">
+                            <br>
+                            <br>
+                            <br>
+                            일상적인 날이지만 자영인 분들께
+                            <br>
+                            좋은 일이 생길 것 만 같습니다.
+                        </a>
+
+                    </p>
+                </td>
+                <td>
+                    <img src="image/we_ico3-1.png" style="margin:20px 0px;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="div3-2">
+        <table style="width:700px; margin:20px 20px;">
+            <tr>
+                <td colspan="5">
+                    <a style="font-size:16px;font-weight: bold;">
+                        내 기상도 등록
+                    </a>
+                </td>
+                <td>
+                    <img src="image/60-6.png" style="margin:0px 0px;">
+                </td>
+                <td>
+                    <a style="font-size:14px;font-weight: bold; color: rgb(128 128 128); text-align:left;">
+                        로그인 후 등록하실 수 있습니다.
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <img src="image/6-18.png" style="margin:0px 0px;">
+                </td>
+
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <img src="image/we_ico1.png" style="margin:0px 0px;">
+                </th>
+                <th>
+                    <img src="image/we_ico2.png" style="margin:0px 0px;">
+                </th>
+                <th>
+                    <img src="image/we_ico3.png" style="margin:0px 0px;">
+                </th>
+                <th>
+                    <img src="image/we_ico4.png" style="margin:0px 0px;">
+                </th>
+                <th>
+                    <img src="image/we_ico5.png" style="margin:0px 0px;">
+                </th>
+                <th>
+                    <img src="image/60-6.png" style="margin:0px 0px;">
+                </th>
+                <th rowspan="3">
+                    <img src="image/login.png" style="margin:-10px 0px;">
+
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <a class="font5">맑음</a>
+                </th>
+                <th>
+                    <a class="font5">다소맑음</a>
+                </th>
+                <th>
+                    <a class="font5">구름조금</a>
+                </th>
+                <th>
+                    <a class="font5">구름많음</a>
+                </th>
+                <th>
+                    <a class="font5">흐림</a>
+                </th>
+                <td>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    <input type="radio" name="remember_id" value="yes">
+                </th>
+                <th>
+                    <input type="radio" name="remember_id" value="yes">
+                </th>
+                <th>
+                    <input type="radio" name="remember_id" value="yes">
+                </th>
+                <th>
+                    <input type="radio" name="remember_id" value="yes">
+                </th>
+                <th>
+                    <input type="radio" name="remember_id" value="yes">
+                </th>
+                <td>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+    <div style="background-color: rgb(255 255 255);
+       position: absolute;
+       left: 50%;
+       top: 434px;
+       width: 500px;
+       height: 34px;
+       margin: -10px 320px;
+       border-bottom: 1px solid rgb(240 240 240);
+       transform: translate(-50%,0%);
+       z-index: 3;
+       ">
+       
+        <h3>
+
+            주간 기상도
+
+        </h3>
+
+    </div>
+    <div style="background-color: rgb(255 255 255);
+       position: absolute;
+       left: 50%;
+       top: 434px;
+       width: 550px;
+       height: 180px;
+       margin: 0px -350px;
+       border-bottom: 1px solid rgb(240 240 240);
+       transform: translate(-50%,0%);
+       z-index: 4;">
+        <div class="section2">
+            <input type="radio" name="slide2" id="slide08" checked>
+            <input type="radio" name="slide2" id="slide09">
+
+
+            <div class="slidewrap2">
+                <ul class="slidelist2">
+                    <li>
+                        <a>
+                            <img src="image/000102.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <img src="image/030405.png">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="slide-control2">
+                    <div class="control08">
+                        <label for="slide09" class="left2"></label>
+                    </div>
+                    <div class="control09">
+                        <label for="slide08" class="right2"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="        background-color: rgb(255 255 255);
+        position: absolute;
+        left: 50%;
+        top: 464px;
+        margin: -45px -380px;
+        width: 500px;
+        height: 34px;
+        transform: translate(-50%,0%);
+        z-index: 9;">
+        <h3>
+            &nbsp;&nbsp;
+            오늘 시간대별 기상도
+
+        </h3>
+        </div>
+            <div id="div4">
+
+                <div id="div4-1" style="margin:25px 330px;">
+
+                    <div class="section">
+                        <input type="radio" name="slide" id="slide01" checked>
+                        <input type="radio" name="slide" id="slide02">
+                        <div class="slidewrap">
+                            <ul class="slidelist">
+                                <li>
+                                    <a>
+                                        <img src="image/6080910.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a>
+                                        <img src="image/6111213.png">
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <div class="slide-control">
+                                <div class="control01">
+                                    <label for="slide02" class="right"></label>
+                                    <label for="slide02" class="left"></label>
+                                </div>
+                                <div class="control02">
+                                    <label for="slide01" class="right"></label>
+                                    <label for="slide01" class="left"></label>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="
+                margin:230px 15px;
+                width:500px;
+                height:40px;">
+                    <a class="font1">기상도 리뷰</a>
+                    </div>
+            </div>
+
+            <div id="div5">
+
+            </div>
+            <div id="div5-1">
+                <table style="margin:-20px 300px; width:700px">
+                    <tr>
+                        <th>
+                            <p style="font-size:15px; "> <br><br>로그인 후 리뷰를 작성해 주세요.</p>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            <div id="div6-1" style="top: 801px;">
+                <img src="image/icon_1-1.png" style="margin:-2px 0px;">
+                <a class="font6"> 06.06 12:44</a>
+                <p class="font6-1"><br>드디어 연휴 마지막날</p>
+            </div>
+            <div id="div6-1" style="top: 897px;">
+                <img src="image/icon_1-1.png" style="margin:-2px 0px;">
+                <a class="font6"> 05.29 16:00</a>
+                <p class="font6-1"><br>오늘은 600 때문에 하루종일 배부르네요 ㅋㅋ</p>
+
+            </div>
+            <div id="div6-3" style="top: 993px;">
+                <img src="image/icon_1-1.png" style="margin:-2px 0px;">
+                <a class="font6"> 05.24 19:26</a>
+                <p class="font6-1">
+                    <br>선거송 짜증나는데<br>
+                    계속 듣다 보니 나도 모르게 선거송 흥얼 거려서 더 짜증나네요<br>
+                    장사도 안돼고 ㅆ ㅏㅇ
+                </p>
+            </div>
+            <div id="div6-2" style="top: 1129px;">
+                <img src="image/icon_1-1.png" style="margin:-2px 0px;">
+                <a class="font6"> 05.21 19:52</a>
+                <p class="font6-1">
+                    <br>집에 들어갈까 말까 수십번 고민 중이네요<br>
+                    손님이 너무 없어요
+                </p>
+            </div>
+            <div id="div6-2" style="top: 1245px;">
+                <img src="image/icon_1-1.png" style="margin:-2px 0px;">
+                <a class="font6"> 05.21 19:52</a>
+                <p class="font6-1"><br>주말 싫다</p>
+
+            </div>
+            <div id="div7" style="white-space:nowrap;">
+                <img src="image/이전.png" style="margin:25px 580px;">
+                <img src="image/다음.png" style="margin:25px -480px;">
+            </div>
+
+            <div id="div7-1" style="border-radius:5px;">
+                <p style="margin:1px 8px; color:white;">1</p>
+            </div>
+
+            <div id="bottom" style="white-space:nowrap;">
+
+
+            </div>
+            <div id="bottom-1" style="
+        width: 81px;
+        height: 81px;
+        margin: 35px -560px;
+        z-index: 6
+    ">
+                <img src="image/logo_2.png">
+            </div>
+            <div id="bottom-1" style="margin:40px 0px;">
+
+                <a style="text-align:start; font-size:15px; color: rgb(100 100 100);">
+
+                    상호명 : 창업창고  &nbsp;&nbsp;
+
+                    이메일(고객문의) : handong_99@naver.com  &nbsp;&nbsp;
+
+                    대표이사 : 양한동  &nbsp;&nbsp;
+
+                    사업자 등록번호 : 123-45-67890  &nbsp;
+
+                    <br>
+                    <br>
+                    ⓒ 창업창고. All Rights Reserved.
+
+                </a>
+            </div>
+</body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창업창고</title>
+    <link rel="stylesheet" href="css/css.css">
+    <style>
+        /* 브라우저 마진, 패딩 없애기 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            background-color: rgb(255 255 255);
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            margin: -100px 100px;
+            z-index: 4;
+            border-bottom: 1px solid rgb(240 240 240);
+        }
+
+        .ddd40 {
+            left: 5%;
+            top: 10px;
+            position: absolute;
+        }
+
+        .ddd1 { /*자영업이야기*/
+            left: 20%;
+            top: 30px;
+            font-size: 15px;
+            position: absolute;
+            font-weight: bold; /*글 속성 굵게*/
+        }
+
+        .ddd2 {
+            left: 40%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        .ddd3 {
+            left: 65%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: bold;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+
+        .ddd4 {
+            left: 80%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: 100;
+        }
+
+        .ddd5 {
+            left: 92%;
+            top: 30px;
+            font-size: 16px;
+            position: absolute;
+            font-weight: 100;
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 링크의 색상 제거 */
+        }
+
+        #div4 { /*자영업이야기* 메뉴*/
+            margin: 15px;
+            background-color: white;
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            top: 1100px; /*꼭대기 기준*/
+            left: 50%;
+            margin: 16px -700px;
+        }
+
+        #div5 { /*today*/
+            margin: 15px;
+            background-color: blue;
+            width: 90px;
+            height: 38px;
+            position: absolute;
+            top: 1120px;
+            border-radius: 10px;
+            margin: 16px -700px;
+            left: 50%;
+        }
+
+        #div6 { /*Weekly*/
+            margin: 15px;
+            background-color: blue;
+            width: 90px;
+            height: 38px;
+            position: absolute;
+            top: 1120px;
+            left: 50%;
+            border-radius: 10px;
+        }
+
+        #div7 { /*자영업이야기 게시판1*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            top: 1240px;
+            margin: 16px -700px;
+            left: 50%;
+            border-radius: 7px;
+        }
+
+        #div8 { /*자영업이야기 게시판2*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            top: 1240px;
+            left: 50%;
+            border-radius: 7px;
+        }
+
+        #div9 { /*자영업이야기 게시판3*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            margin: 16px -700px;
+            left: 50%;
+            top: 1360px;
+            border-radius: 7px;
+        }
+
+        #div10 { /*자영업이야기 게시판4*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            top: 1360px;
+            left: 50%;
+            border-radius: 7px;
+        }
+
+        #div11 { /*자영업이야기 게시판5*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            top: 1480px;
+            border-radius: 7px;
+            margin: 16px -700px;
+            left: 50%;
+        }
+
+        #div12 { /*자영업이야기 게시판6*/
+            margin: 15px;
+            background-color: rgb(240 240 240);
+            width: 700px;
+            height: 100px;
+            position: absolute;
+            top: 1480px;
+            left: 50%;
+            border-radius: 7px;
+        }
+
+        #div28 {
+            margin: 25px;
+            top: 3px;
+            background-color: skyblue;
+            width: 95px;
+            height: 45px;
+            position: absolute;
+            border-radius: 10px;
+            z-index: 5;
+        }
+
+
+        .ccc4 { /*today 글씨체*/
+            margin: 2px;
+            font-size: 20px;
+            text-align: center;
+            position: absolute;
+            left: 17%;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .ccc5 { /*weekly 글씨체*/
+            margin: 2px;
+            font-size: 19px;
+            text-align: center;
+            position: absolute;
+            left: 15%;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .ccc37 {
+            top: 13px;
+            font-size: 15px;
+            text-align: center;
+            position: absolute;
+            left: 11px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .ccc38 {
+            font-size: 18px;
+            margin: 30px;
+            position: absolute;
+            font-weight: bold;
+            z-index: 5;
+            left: 100px;
+        }
+
+        .ccc39 {
+            font-size: 15px;
+            margin: 30px;
+            position: absolute;
+            color: gray;
+            font-weight: 520;
+            z-index: 5;
+            left: 100px;
+            top: 25px;
+        }
+
+
+        #bottom {
+            width: 100%;
+            height: 162px;
+            background-color: rgb(246 248 249);
+            position: absolute;
+            top: 1800px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            z-index: 5;
+        }
+
+        #bottom-1 {
+            width: 900px;
+            height: 102px;
+            background-color: rgba(246, 248, 249, 0);
+            position: absolute;
+            top: 1800px;
+            left: 50%;
+            transform: translate(-50%,0%);
+            margin: 0px -100px;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+    <div id="div1">
+        <a href="main.html"><img class="ddd40" src="image/logo_1.png"></a>
+        <a href="list.html" class="ddd1">자영업 이야기</a>
+        <a href="자영업기상청.html" class="ddd2">자영업 기상청</a>
+        <a href="ex - 복사본/a.html" class="ddd3">창업 분석실</a>
+        <a class="ddd4">로그인 후 이용해주세요 |</a>
+        <a href="login.html" class="ddd5">회원가입</a>
+
+    </div>
+
+
+
+
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>자영업 이야기</strong> <p>진짜 자영업자들의 정보 공유 소통 놀이공간</p>
+
+            <p style="text-align:right;">전체 1,002건의 게시물이 있습니다.</p>
+
+        </div>
+        <div class="board_list_wrap">
+            <div class="board_list">
+                <div class="top">
+                    <div class="num">번호</div>
+                    <div class="title">제목</div>
+                    <div class="writer">작성자</div>
+                    <div class="date">작성일</div>
+                    <div class="count">조회</div>
+                    <div class="recommended">추천</div>
+                    <div class="notrecommended">비추천</div>
+
+                </div>
+                <div>
+                    <div class="num">1</div>
+                    <div class="title"><a href="view.html">칼 가위 갈때 팁</a></div>
+                    <div class="writer">좋은놈</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">10</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">2</div>
+                    <div class="title"><a href="view.html">냉면은 아무리 바빠도 물 넉넉하게</a></div>
+                    <div class="writer">호구사장</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">5</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">3</div>
+                    <div class="title"><a href="view.html">당근으로 알바 구한다고요</a></div>
+                    <div class="writer">알콜홀릭</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">4</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">4</div>
+                    <div class="title"><a href="view.html">요기요는 주문 거절 함부로 하지 마세요</a></div>
+                    <div class="writer">차가운사장</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">8</div>
+                    <div class="not recommended">1</div>
+                </div>
+                <div>
+                    <div class="num">5</div>
+                    <div class="title"><a href="view.html">내일부터 확인지급 신청 시작입니다</a></div>
+                    <div class="writer">다이나마이트</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">15</div>
+                    <div class="not recommended">2</div>
+                </div>
+                <div>
+                    <div class="num">6</div>
+                    <div class="title"><a href="view.html">장사를 할수록 직원 알바 없는 장사가 최고하는걸 깨닫습니다</a></div>
+                    <div class="writer">달달구리</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">14</div>
+                    <div class="not recommended">1</div>
+                </div>
+                <div>
+                    <div class="num">7</div>
+                    <div class="title"><a href="view.html">냉면 육수 슬러시아 사용법</a></div>
+                    <div class="writer">껍데기장인</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">7</div>
+                    <div class="not recommended">1</div>
+                </div>
+                <div>
+                    <div class="num">8</div>
+                    <div class="title"><a href="view.html">자영업자 무료홍보해주는 사이트가 생겼네요!</a></div>
+                    <div class="writer">완소</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">5</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">9</div>
+                    <div class="title"><a href="view.html">매직랩 본사 방법대로 하시는 사장님 계신가요?</a></div>
+                    <div class="writer">테리아</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">10</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">10</div>
+                    <div class="title"><a href="view.html">오늘은 외곽쪽 식당도 폭망 중</a></div>
+                    <div class="writer">꼬르륵</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">25</div>
+                    <div class="not recommended">2</div>
+                </div>
+                <div>
+                    <div class="num">11</div>
+                    <div class="title"><a href="view.html">자료 끊어 주다가 지원금 못 받았다네요</a></div>
+                    <div class="writer">싱싱한놈</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">35</div>
+                    <div class="not recommended">2</div>
+                </div>
+                <div>
+                    <div class="num">12</div>
+                    <div class="title"><a href="view.html">전지x씨 치킨집 매물이 쏟아지네요0</a></div>
+                    <div class="writer">드래곤볼</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">4</div>
+                    <div class="not recommended">0</div>
+                </div>
+                <div>
+                    <div class="num">13</div>
+                    <div class="title"><a href="view.html">겨우겨우 평타 치고 마감합니다</a></div>
+                    <div class="writer">얼굴스타</div>
+                    <div class="date">2022.06.15</div>
+                    <div class="count">33</div>
+                    <div class="recommended">1</div>
+                    <div class="not recommended">0</div>
+                </div>
+
+
+
+            </div>
+            <div class="board_page">
+                <a href="#" class="bt first"><<</a>
+                <a href="#" class="bt prev"><</a>
+                <a href="#" class="num on">1</a>
+                <a href="#" class="num">2</a>
+                <a href="#" class="num">3</a>
+                <a href="#" class="num">4</a>
+                <a href="#" class="num">5</a>
+                <a href="#" class="bt next">></a>
+                <a href="#" class="bt last">>></a>
+            </div>
+            <div class="bt_wrap">
+                <a href="write.html" class="on">등록</a>
+                <!--<a href="#">수정</a>-->
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+  
+
+  <body>
+
+    <div id="div5">
+      <a class="ccc4">Today</a>
+    </div>
+    <div id="div6">
+      <a class="ccc5">Weekly</a>
+    </div>
+    <div id="div7">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">코로나 자기격리 해제</span>
+      <span class="ccc39">우리 직원들은 이미 다 걸리긴 했지만그래도 좋은건 좋은거죠 ㅋ</span>
+    
+    </div>
+    <div id="div8">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">쿠팡 배민1 가격이 너무 올랐어요ㅜㅜ</span>
+      <span class="ccc39">작년엔 이해하겠는데요즘엔 3 4천원대 주면서왜 가격 올렸냐단건은 진짜.....</span>
+    
+    </div>
+    <div id="div9">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">쿠팡 배민1 가격이 너무 올랐어요ㅜㅜ</span>
+      <span class="ccc39">작년엔 이해하겠는데요즘엔 3 4천원대 주면서왜 가격 올렸냐단건은 진짜.....</span>
+    
+    </div>
+    <div id="div10">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">쿠팡 배민1 가격이 너무 올랐어요ㅜㅜ</span>
+      <span class="ccc39">작년엔 이해하겠는데요즘엔 3 4천원대 주면서왜 가격 올렸냐단건은 진짜.....</span>
+    
+    
+    </div>
+    <div id="div11">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">쿠팡 배민1 가격이 너무 올랐어요ㅜㅜ</span>
+      <span class="ccc39">작년엔 이해하겠는데요즘엔 3 4천원대 주면서왜 가격 올렸냐단건은 진짜.....</span>
+    
+    </div>
+    <div id="div12">
+      <div id="div28">
+        <span class="ccc37">장사이야기</span>
+      </div>
+      <span class="ccc38">쿠팡 배민1 가격이 너무 올랐어요ㅜㅜ</span>
+      <span class="ccc39">작년엔 이해하겠는데요즘엔 3 4천원대 주면서왜 가격 올렸냐단건은 진짜.....</span>
+    
+    </div>
+
+
+  </body>
+
+<body>
+  <div id="bottom" style="white-space:nowrap;">
+
+
+  </div>
+  <div id="bottom-1" style="
+      width: 81px;
+      height: 81px;
+      margin: 30px -560px;
+      z-index: 6
+  ">
+      <img src="image/logo_2.png">
+      </div>
+      <div id="bottom-1" style="margin:40px 0px;">
+
+          <a style="text-align:start; font-size:15px; color: rgb(100 100 100);">
+
+              상호명 : 창업창고  &nbsp;&nbsp;
+
+              이메일(고객문의) : handong_99@naver.com  &nbsp;&nbsp;
+
+              대표이사 : 양한동  &nbsp;&nbsp;
+
+              사업자 등록번호 : 123-45-67890  &nbsp;
+
+              <br>
+              <br>
+              ⓒ 창업창고. All Rights Reserved.
+
+          </a>
+      </div>
+</body>
+
+</html> 

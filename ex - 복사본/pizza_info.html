@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>반올림피자샵</title>
+        <style>
+        .container{
+            width:1280px;
+            height:20px;
+            padding-bottom:40px;
+            margin:10px auto;
+            padding-top: 115px;
+            font-weight: 800;
+            font-size: 200%;
+            border-bottom: 2px solid rgb(240, 240, 240);
+        }
+        .container2/*정보 분류*/{
+            width:100px;
+            height:20px;
+            padding-bottom:40px;
+            margin:10px auto;
+            position: absolute;
+            top: 300px;
+            transform: translate(-50%,-320%);
+            text-align: center;
+            font-size: 13px;
+            background-color: rgb(240, 240, 240);
+            border-bottom-left-radius:20px;  /* 왼쪽 아래 모서리 둥글게함*/
+	        border-bottom-right-radius:20px;  /* 오른쪽 아래 모서리 둥글게함*/
+            border-top-left-radius:20px;   /* 왼쪽 위 모서리 둥글게함*/
+	        border-top-right-radius:20px;  /* 오른쪽 위 모서리 둥글게함*/
+        }
+        .subheading1{
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 35px;
+            color: blue;
+            margin-bottom: 20px;
+        }/*창업비용 전용 스타일*/
+        .subheading2{
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 35px;
+            color: black;
+            margin-bottom: 20px;
+        }/*각 분류별 소제목*/
+        .line{
+            width:1280px;
+            margin:10px auto;
+            margin-top: 115px;
+            border-bottom: 2px solid rgb(240, 240, 240);
+        }/* 구분줄*/
+        .small1{
+            font-size: 16px;
+            color: gray;
+            margin:0px;
+        }/*상단 창업분석실 옆 부가설명 텍스트*/
+        .small2{
+            font-weight: normal;
+            color: black;
+        }
+        .div1{
+            width: 630px;
+            height:80px;
+            transform: translate(48%,0%);
+            margin:0px;
+            padding:10px;
+            
+        }
+        .img1{
+            float: right;
+            transform: translate(640%,50%);
+        }
+        p{
+            padding: 0px;
+            margin: 10px auto;
+            color: gray;
+            font-size: 13px;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            display:inline-block;
+            width:103px;
+        }/*세부정보 정렬*/
+        .fborder{
+            width: 1280px;
+            margin: 10px auto;
+            border-color: rgb(240, 240, 240);
+        }
+        .fborderx{
+            width: 1280px;
+            margin-top: 10px;
+            border: none;
+            margin-left: 240px;
+        }/*기타 상세정보*/
+        .fborder1{
+            width: 1280px;
+            margin: 10px auto;
+            border: none;
+        }/*버튼을 모아줄 폼*/
+        table{
+            caption-side: bottom;
+            border: 1px solid rgb(236, 227, 227);
+            border-collapse: collapse;
+            margin: 0px auto;
+            margin-bottom: 20px;
+        }
+        td, th{
+            border: 1px solid rgb(236, 227, 227);
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            color: blue;
+        }
+        .divB{
+            margin: 0px auto;
+            margin-left: 500px;
+        }
+        .button0{
+            color: white;
+            background-color: rgb(57, 57, 211);
+            border: none;
+            padding: 10px;
+        }
+        .commentbox{
+            width: 1280px; 
+            height: 50px; 
+            line-height: 50px; 
+            background-color: rgb(240,240,240); 
+            text-align:center; 
+            border: none; 
+            margin: 0px auto;
+        }/*댓글란 표시*/
+        .storelist{
+            width: 70px;
+            float: right;
+            transform: translate(30%,0%);
+            margin:10px auto;
+        }/*댓글란 밑 목록 버튼 위치*/
+        </style>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="top">
+            <img class="ddd4" src="image/logo_1.png">
+            <a class="ddd1">자영업 이야기</a>
+            <a class="ddd2">자영업 기상청</a>
+            <a class="ddd3">창업 분석실</a>
+        </div>
+        <div class="container">
+            창업분석실 <small class="small1">뜨는 프랜차이즈만 모았습니다!</small>
+        </div>
+        <div class="div1">
+            <img class="img1" src="image/피자그림.png" alt="마크" width="100px">
+            <h3 style="margin: 0px auto;">반올림피자샵</h3>
+            <p>합리적 가격의 내가 선택한 토핑, 사이즈의 피자</p>
+            <h5 style="margin: 5px auto;">사업자등록번호: 298-86-00407</h5>
+            <ul>
+                <li>
+                    <div class="container2">
+                        업종
+                        <h5>피자</h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="container2">
+                        창업비용
+                        <h5>3630만원</h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="container2">
+                        월 평균 매출
+                        <h5>4338만원</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="line">
+        </div> <!--버튼자리지만 잘 안풀리므로 나중에 만듬-->
+        <form>
+            <fieldset class="fborder1">
+                <div class="divB">
+                    <a href="https://franchise.ftc.go.kr/mnu/00013/program/userRqst/view.do?firMstSn=81626" target="_blank"><input class="button0"type="button" value="공정위정보공개서"></a>
+                    <a href="https://www.handmadepizza.co.kr/main" target="_blank"><input class="button0" type="button" value="업계홈페이지"></a></div>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset class="fborder"><!--필드셋에 적용하면 테두리가 바뀐다.-->
+                <div class="subheading1">
+                    창업비용 <small class="small2">기준면적 : <b>33㎡(10평)</b></small>
+                </div>
+                <table border="1">
+                    <colgroup>
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                    </colgroup>
+                    <tr style="background-color: rgb(236, 227, 227);">
+                        <td>가맹비</td>
+                        <td>교육비</td>
+                        <td>보증금</td>
+                        <td>인테리어</td>
+                        <td>기타</td>
+                    </tr>
+                    <tr>
+                        <td>1100</td>
+                        <td>220</td>
+                        <td>0</td>
+                        <td>550</td>
+                        <td>1760</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background-color: rgb(236, 227, 227);">창업비용 합계</td>
+                        <th colspan="3">3,630만원</th>
+                    </tr>
+                </table>
+                <div class="subheading2">
+                    업체 홈페이지상 창업비용
+                </div>
+                <img style="margin-left: 35px;" src="pizza_img/반올림피자샵창업비용그래프.jpg" alt="창업비용정리" width="1200px">
+            </fieldset>
+            <fieldset class="fborder"><!--월평균매출 장소-->
+                <div class="subheading1">
+                    월평균 매출
+                </div>
+                <table border="1">
+                    <colgroup>
+                        <col style="width:400px;">
+                        <col style="width:400px;">
+                        <col style="width:400px;">
+                    </colgroup>
+                    <tr style="background-color: rgb(236, 227, 227);">
+                        <td>연도</td>
+                        <td>가맹점 수</td>
+                        <td>평균 월매출액</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>265</td>
+                        <th style="color:red;">4,338만원</th>
+                    </tr>
+                </table>
+                <img style="margin-left: 35px;" src="pizza_img/반올림피자샵매출그래프.jpg" alt="창업비용정리" width="1200px">
+            </fieldset>
+            <fieldset class="fborder"><!--가맹점 수 변동-->
+                <div class="subheading1">
+                    가맹점 수 변동
+                </div>
+                <table border="1">
+                    <colgroup>
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                        <col style="width:240px;">
+                    </colgroup>
+                    <tr style="background-color: rgb(236, 227, 227);">
+                        <td>연도</td>
+                        <td>신규</td>
+                        <td>계약종료</td>
+                        <td>계약해지</td>
+                        <td>명의변경</td>
+                    </tr>
+                    <tr>
+                        <td>2020</td>
+                        <td>35</td>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <td>2019</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>33</td>
+                    </tr>
+                    <tr>
+                        <td>2018</td>
+                        <td>31</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>22</td>
+                    </tr>
+                </table>
+                <img style="margin-left: 35px;" src="pizza_img/반올림피자샵가맹점그래프.jpg" alt="창업비용정리" width="1200px">
+            </fieldset>
+            <fieldset class="fborderx"><!--기타 상세정보-->
+                <div class="subheading1">
+                    기타 상세정보
+                </div>
+                <div class="subheading2">
+                    <img src="meat_img/족발신선생로고.jpg">
+                </div>
+                <div class="subheading2">
+                    <img src="pizza_img/반올림피자샵1.jpg">
+                    <img src="pizza_img/반올림피자샵2.jpg">
+                    <img src="pizza_img/반올림피자샵3.jpg">
+                    <img src="pizza_img/반올림피자샵4.jpg">
+                    <img src="pizza_img/반올림피자샵5.jpg">
+                    <img src="pizza_img/반올림피자샵6.jpg">
+                </div>
+                <small style="color: gray; margin-left: 35px;">등록된 댓글이 없습니다. 첫번째 댓글의 주인공이 되어보세요!</small><br>
+            </fieldset>
+            <fieldset class="commentbox">
+                <div class="commentbox">
+                    로그인한 회원만 댓글 등록이 가능합니다.
+                </div>
+                <div class="storelist">
+                    <a href="a.html"><input type="button" value="목록"></a>
+                </div>
+            </fieldset>
+        </form>
+        <div class="container0">
+            창업분석실 <small class="small0">뜨는 프랜차이즈만 모았습니다!</small>
+        </div>
+        <nav class="navi">
+            <ul>
+                <li><a href="a.html">전체</a></li>
+                <li><a href="restaurant.html">식당</a></li>
+                <li><a href="cafe.html">카페</a></li>
+                <li><a href="meat.html">족발, 고기</a></li>
+                <li><a href="pizza.html">피자</a></li>
+                <li><a href="PC.html">PC,노래방</a></li>
+                <li><a href="etc.html">기타</a></li>
+            </ul>            
+            <form>
+                <fieldset class="fborder0">
+                    <input class="Bsearch" type="submit" value="검색">
+                    <input class="search" type="text" id="store"size="10"placeholder="검색어를 입력하세요.">
+                </fieldset>
+            </form>
+        </nav>
+        <div class="div0">
+            <a href="cafe_info.html"><img id="round" src="image/카페인중독.jpg" width="610" height="130"></a>
+        </div>
+        <div class="div0">
+            <a href="meat_info.html"><img id="round" src="image/족발.jpg" width="610" height="130"></a>
+        </div>
+        <div class="div0">
+            <a href="retaurant_info.html"><img id="round" src="image/프랭크버거.jpg" width="610" height="130"></a>
+        </div>
+        <div class="div0">
+            <a href="pizza_info.html"><img id="round" src="image/반올림피자.jpg" width="610" height="130"></a>
+        </div>
+        <div class="div0">
+            <a href="PC_info.html"><img id="round" src="image/제너스PC방.jpg" width="610" height="130"></a>
+        </div>
+        <div class="div0">
+            <a href="etc_info.html"><img id="round" src="image/만화카페벌툰.jpg" width="610" height="130"></a>
+        </div>
+        <div class="page">
+            <a href=""><</a>    
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+            <a href="">6</a>
+            <a href="">7</a>
+            <a href="">8</a>
+            <a href="">9</a>
+            <a href="">10</a>
+            <a href="">></a>
+        </div>
+        <div id="bottom" style="white-space:nowrap;
+        top: 15150px;"><!--바닥회색배경-->
+    </div>
+    <div id="bottom-1" style="
+        width: 81px;
+        height: 81px;
+        margin: 35px -560px;
+        top: 15150px;
+        z-index: 6"><!--이미지-->
+        <img src="image/logo_2.png">
+        </div>
+        <div id="bottom-1" style="margin:40px 0px; top: 15150px;"><!--글-->
+
+            <a style="text-align:start; font-size:15px; color: rgb(100 100 100);">
+
+                상호명 : 창업창고  &nbsp;&nbsp;
+
+                이메일(고객문의) : handong_99@naver.com  &nbsp;&nbsp;
+
+                대표이사 : 양한동  &nbsp;&nbsp;
+
+                사업자 등록번호 : 123-45-67890  &nbsp;
+
+                <br>
+                <br>
+                ⓒ 창업창고. All Rights Reserved.
+
+            </a>
+        </div>
+    </body>
+</html>
